@@ -191,7 +191,10 @@
           console.log(ans);
           ans = ans.substring(ans.indexOf(".") + 1);
           ans = ans.toUpperCase();
-
+        
+          if(ans === "") {
+            alert("Câu hỏi này không có đáp án");
+          }
           var text_checked = e.target.parentNode.textContent.toUpperCase();
 
           // console.log(ans, text_checked)
