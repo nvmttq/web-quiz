@@ -28,7 +28,7 @@ function getChoice() {
           if (
             c.style.backgroundColor.includes("253")
           ) {
-            obj.correct = 1;
+            obj.correct = z;
             //console.log(z)
           }
         })
