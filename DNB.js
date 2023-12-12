@@ -42,7 +42,7 @@ res.forEach((r) => {
     div_question.appendChild(div_ques);
     div_question.appendChild(div_choices);
 
-  document.querySelector("#root").appendChild(div_question);
+  document.querySelector("#DNB-quiz").appendChild(div_question);
   id++;
 });
 
