@@ -17,13 +17,33 @@
   </style>
   <body>
 
-    <div id="list-quiz">
-      <button onclick="">Đông Nam Bộ</button>
+    <div id="list-quiz" style="margin-bottom: 50px;">
+      <button onclick="runQuiz('DNB-quiz')">Đông Nam Bộ</button>
+      <button onclick="runQuiz('CNXHKH-quiz')">Chủ nghĩa xã hội khoa học</button>
     </div>
 
-    <div id="DNB-quiz">
+    
+    <div id="container-quiz">
+      <div id="DNB-quiz" style="display: none;">
 
+      </div>
+  
+      <div id="CNXHKH-quiz" style="display: none;">
+  
+      </div>
     </div>
+
+
     <script src="DNB.js"></script>
+    <script src="CNXHKH.js"></script>
+
+    <script>
+      function runQuiz (idQuiz) {
+        document.querySelectorAll("#container-quiz > div").forEach(quiz => {
+          quiz.style.display = 'none';
+        })
+        document.getElementById(idQuiz).style.display = "block";
+      }
+    </script>
   </body>
 </html>
