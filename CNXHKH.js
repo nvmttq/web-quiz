@@ -56,7 +56,7 @@ res1.forEach((r, id) => {
  
 });
 
-var all_input = document.querySelectorAll("input");
+var all_input = document.querySelectorAll("#CNXHKH-quiz input");
 
 all_input.forEach((ai) => {
   ai.addEventListener("click", (e) => {
@@ -71,7 +71,7 @@ all_input.forEach((ai) => {
       alert("Câu hỏi này không có đáp án");
     }
     var text_checked = e.target.parentNode.textContent.toUpperCase();
-
+    // console.log(ans, name, text_checked);
     // console.log(ans, text_checked)
     document.querySelectorAll("p").forEach((p) => {
       if (p.classList.contains(name)) {
@@ -94,7 +94,7 @@ all_input.forEach((ai) => {
   });
 });
 
-var all_p = document.querySelectorAll("p");
+var all_p = document.querySelectorAll("#CNXHKH-quiz p");
 
 all_p.forEach((ap) => {
   ap.addEventListener("click", (e) => {
