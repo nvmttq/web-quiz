@@ -11,6 +11,7 @@
   <style>
     .choice {
       display: flex;
+      width: 100vw;
     }
 
     #list-quiz {
@@ -23,6 +24,7 @@
     <div id="list-quiz" style="margin-bottom: 50px;">
       <button onclick="runQuiz('DNB-quiz')">Đông Nam Bộ</button>
       <button onclick="runQuiz('CNXHKH-quiz')">Chủ nghĩa xã hội khoa học</button>
+      <button onclick="runQuiz('TTHCM-quiz')">Tư tưởng Hồ Chí Minh</button>
     </div>
 
     
@@ -34,11 +36,16 @@
       <div id="CNXHKH-quiz" style="display: none;">
   
       </div>
+
+      <div id="TTHCM-quiz" style="display: none;">
+  
+      </div>
     </div>
 
 
     <script src="DNB.js"></script>
     <script src="CNXHKH.js"></script>
+    <script src="TTHCM.js"></script>
 
     <script>
       function runQuiz (idQuiz) {
