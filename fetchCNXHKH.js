@@ -3,7 +3,7 @@
 
 const formatText = (text) => {
 // Replace multiple spaces with single space
-let newText = text.trim().split(/[\s,\t,\n]+/).join(' ');
+let newText = text.trim().split(/[\s,\n]+/).join(' ');
 
 // Display the result
 return newText

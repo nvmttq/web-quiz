@@ -43,14 +43,7 @@ function createP(text, id, tag) {
 
 let id = 0;
 
-const formatText = (text) => {
-  // Replace multiple spaces with single space
-  let newText = text.trim().split(/[\s,\t,\n]+/).join(' ');
-  
-  // Display the result
-  return newText
-}
-let same = 0;
+
 res2.forEach((r) => {
     var div_question = document.createElement("div");
     var div_ques = document.createElement("div");
