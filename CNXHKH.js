@@ -2,16 +2,25 @@ var res1 = '[{"no":1,"ques":"Trong khuôn khổ môn học chủ nghĩa xã hộ
 
 res1 = JSON.parse(res1);
 
-function shuffleArray(array) {
+const randomQuiz = () => {
+  function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         // Swap array[i] and array[j]
         [array[i], array[j]] = [array[j], array[i]];
     }
     return array;
+  }
+
+  res1 = shuffleArray(res1);
+
+  var master = document.querySelector("#CNXHKH-quiz")
+  master.innerHTML = '<button onclick="randomQuiz()">Tạo ngẫu nhiên câu hỏi</button>';
+  
+  
+  buildQuiz();
 }
 
-res1 = shuffleArray(res1);
 function createRadio(id) {
     var radio = document.createElement("input");
     radio.type = "radio";
@@ -28,7 +37,8 @@ function createP(text, id, tag) {
 
 
 
-res1.forEach((r, id) => {
+const buildQuiz = () => {
+  res1.forEach((r, id) => {
     var div_question = document.createElement("div");
     var div_ques = document.createElement("div");
     var div_choices = document.createElement("div");
@@ -52,10 +62,11 @@ res1.forEach((r, id) => {
     div_question.appendChild(div_ques);
     div_question.appendChild(div_choices);
 
-  document.querySelector("#CNXHKH-quiz").appendChild(div_question);
- 
-});
-
+    document.querySelector("#CNXHKH-quiz").appendChild(div_question);
+  
+  });
+}
+buildQuiz();
 var all_input = document.querySelectorAll("#CNXHKH-quiz input");
 
 all_input.forEach((ai) => {

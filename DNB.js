@@ -2,6 +2,28 @@ var res2 = '[{"no":1,"ques":"Tộc người nào sau đây được xem là tộ
 
 
 res2 = JSON.parse(res2);
+
+// var text = "";
+// res2.forEach(r => {
+//   const choices = r.choices;
+//   text += r.ques + '\n';
+//   text += `A. ${choices[0]}\n`
+//   text += `B. ${choices[1]}\n`
+//   text += `C. ${choices[2]}\n`
+//   text += `D. ${choices[3]}\n`
+
+//   var tag_ans = "A"
+//   choices.forEach((c, id) => {
+//     if(c === r.ans) {
+//       if(id === 0) tag_ans = "A";
+//       else if(id === 1) tag_ans = "B";
+//       else if(id === 2) tag_ans = "C";
+//       else tag_ans = "D";
+//     }
+//   });
+
+//   text += `ANSWER: ${tag_ans}\n`
+// })
 function createRadio(id) {
     var radio = document.createElement("input");
     radio.type = "radio";
