@@ -104,7 +104,7 @@ var all_p = document.querySelectorAll("#TTHCM-quiz p");
 
 all_p.forEach((ap) => {
   ap.addEventListener("click", (e) => {
-    var parent = e.target.parentNode;
+    var parent = e.target.parentNode.parentNode;
     parent.childNodes.forEach((child) => {
       if (child.tagName === "INPUT") {
       //  console.log(child.tagName);
