@@ -35,7 +35,9 @@ function createRadio(id) {
 }
 function createP(text, id, tag) {
     var p = document.createElement("p");
-    p.innerHTML = `<b>${tag}.</b> \t\t` + text
+    p.innerHTML = `<b>${tag}.</b> \t\t` + `<p>${text}</p>`
+    p.style.display = 'flex';
+    p.style.alignItems = 'center'
     p.classList.add(id.toString());
     return p;
 }
@@ -74,6 +76,9 @@ res2.forEach((r) => {
 
 var all_input = document.querySelectorAll("#DNB-quiz input");
 
+
+
+
 all_input.forEach((ai) => {
   ai.addEventListener("click", (e) => {
     var name = e.target.name;
@@ -86,8 +91,7 @@ all_input.forEach((ai) => {
     if (ans === "") {
       alert("Câu hỏi này không có đáp án");
     }
-    var text_checked = e.target.parentNode.textContent.toUpperCase();
-
+    var text_checked = e.target.parentNode.querySelector("p p").textContent.toUpperCase();
     // console.log(ans, name, text_checked,text_checked.includes(ans));
     // console.log(ans, text_checked)
     document.querySelectorAll("p").forEach((p) => {
@@ -99,7 +103,7 @@ all_input.forEach((ai) => {
 
     e.target.parentNode.childNodes.forEach((child) => {
       if (child.tagName === "P") {
-        if (text_checked.includes(ans)) {
+        if (text_checked === ans) {
           child.style.color = "green";
           child.style.fontWeight = "bold";
         } else {

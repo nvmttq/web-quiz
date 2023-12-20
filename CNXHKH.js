@@ -32,11 +32,14 @@ function createRadio(id) {
     radio.classList.add(id.toString());
     return radio;
 }
+
 function createP(text, id, tag) {
-    var p = document.createElement("p");
-    p.innerHTML = `<b>${tag}.</b> \t\t` + text
-    p.classList.add(id.toString());
-    return p;
+  var p = document.createElement("p");
+  p.innerHTML = `<b>${tag}.</b> \t\t` + `<p>${text}</p>`
+  p.style.display = 'flex';
+  p.style.alignItems = 'center'
+  p.classList.add(id.toString());
+  return p;
 }
 
 
@@ -85,8 +88,8 @@ all_input.forEach((ai) => {
     if (ans === "") {
       alert("Câu hỏi này không có đáp án");
     }
-    var text_checked = e.target.parentNode.textContent.toUpperCase();
-    // console.log(ans, name, text_checked);
+    var text_checked = e.target.parentNode.querySelector("p p").textContent.toUpperCase();
+    // console.log(ans, name, text_checked,text_checked.includes(ans));
     // console.log(ans, text_checked)
     document.querySelectorAll("p").forEach((p) => {
       if (p.classList.contains(name)) {
@@ -97,7 +100,7 @@ all_input.forEach((ai) => {
 
     e.target.parentNode.childNodes.forEach((child) => {
       if (child.tagName === "P") {
-        if (text_checked.includes(ans)) {
+        if (text_checked === ans) {
           child.style.color = "green";
           child.style.fontWeight = "bold";
         } else {
@@ -106,6 +109,7 @@ all_input.forEach((ai) => {
         }
       }
     });
+    
   });
 });
 
