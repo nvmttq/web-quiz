@@ -75,9 +75,8 @@ const buildQuiz = () => {
     document.querySelector("#CNXHKH-quiz").appendChild(div_question);
   
   });
-}
-buildQuiz();
-var all_input = document.querySelectorAll("#CNXHKH-quiz input");
+
+  var all_input = document.querySelectorAll("#CNXHKH-quiz input");
 
 all_input.forEach((ai) => {
   ai.addEventListener("click", (e) => {
@@ -129,6 +128,9 @@ all_p.forEach((ap) => {
     });
   });
 });
+
+}
+buildQuiz();
 
 
 
