@@ -18,7 +18,7 @@ const isPartial = (el) => {
 
 const formatText = (text) => {
     // Replace multiple spaces with single space
-    let newText = text.trim().split(/[\s,\n]+/).join(' ');
+    let newText = text.trim().split(/[\s]+/).join(' ');
     
     // Display the result
     return newText
@@ -69,7 +69,8 @@ allRows.forEach( tr => {
             text = formatText(text.slice(text.indexOf(".") + 1));
             obj.choices.push(text);
             p.querySelectorAll("span").forEach(span => {
-                if(span.style.color === "red" || span.style.colr === "black") {
+                if(span.style.color === "red" || span.style.color === "black" || span.parentNode.tagName === "B") {
+                    // console.log(span.parentNode.tagName)
                     obj.ans = text;
                     noAns++;
                 }
