@@ -18,7 +18,7 @@ function shuffleArray(array) {
     return array;
 }
 
-tthcm = shuffleArray(tthcm);
+//tthcm = shuffleArray(tthcm);
 function createRadio(id) {
     var radio = document.createElement("input");
     radio.type = "radio";
