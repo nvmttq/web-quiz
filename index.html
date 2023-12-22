@@ -11,7 +11,7 @@
   <style>
     .choice {
       display: flex;
-      width: 100vw;
+      width: 100%;
     }
 
     #list-quiz {
@@ -19,9 +19,20 @@
       margin-top: 50px;
     }
 
-    div {
-      max-width: 500%;
+    #container-quiz > div {
+      max-width: 90%;
       text-wrap: wrap;
+      word-wrap: break-word;
+    }
+
+
+    #note {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
     }
   </style>
   <body>
@@ -43,7 +54,14 @@
       </div>
 
       <div id="TTHCM-quiz" style="display: none;">
-        
+        <div id="note">
+          <div>Chương 1 : Đầu - 66</div>
+          <div>Chương 2 : Câu 67 - 166</div>
+          <div>Chương 3 : Câu 167 - 276</div>
+          <div>Chương 4 : Câu 277 - 495</div>
+          <div>Chương 5 : Câu 496 - 590</div>
+          <div>Chương 6 : Câu 591 - Hết</div>
+        </div>
       </div>
     </div>
 
