@@ -69,7 +69,7 @@ allRows.forEach( tr => {
             text = formatText(text.slice(text.indexOf(".") + 1));
             obj.choices.push(text);
             p.querySelectorAll("span").forEach(span => {
-                if(span.style.color === "red" || span.style.color === "black" || span.parentNode.tagName === "B") {
+                if(span.style.color === "red" || span.parentNode.tagName === "B") {
                     // console.log(span.parentNode.tagName)
                     obj.ans = text;
                     noAns++;
