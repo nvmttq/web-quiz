@@ -52,6 +52,7 @@ function createQuestion(no, ques) {
       choices.forEach((choice, id) => {
         choice.classList.remove("correct");
         choice.classList.remove("wrong");
+        choice.style.fontWeight = 'normal'
       });
 
       if(arr[noQues - 1].correctId === text.innerText[0]) {
